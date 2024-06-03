@@ -27,17 +27,17 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gray-900 text-gray-100">
-        <Dashboard />
+      <div className="min-h-screen">
         <div className="drawer lg:drawer-open">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col items-center justify-start">
             <div className="w-full px-4 py-6">
-              <EventCountCard />
-              <div className="overflow-x-auto mt-6">
-                <table className="min-w-full divide-y divide-gray-700">
+              <div className="overflow-x-auto">
+                <Dashboard />
+                <EventCountCard />
+                <table className="min-w-full divide-y">
                   <thead>
-                    <tr className="bg-gray-800 text-gray-300">
+                    <tr>
                       <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                         Timestamp
                       </th>
@@ -73,9 +73,9 @@ function App() {
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="bg-gray-700 divide-y divide-gray-600">
+                  <tbody className="divide-y ">
                     {events.map((event, index) => (
-                      <tr key={index} className="hover:bg-gray-600">
+                      <tr key={index}>
                         <td className="px-6 py-4 text-sm">
                           {formatDate(event.timestamp)}
                         </td>

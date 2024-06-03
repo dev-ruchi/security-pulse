@@ -10,12 +10,10 @@ function Drawer() {
       ></label>
       <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
         {/* Sidebar content here */}
-        <li>
-          <a>Sidebar Item 1</a>
-        </li>
-        <li>
-          <a>Sidebar Item 2</a>
-        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#logout">Logout</a></li>
       </ul>
     </div>
   );

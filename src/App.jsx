@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import EventCountCard from "./EventCountCard";
 import Dashboard from "./Dashboard";
 import Drawer from "./Drawer";
 import Navbar from "./Navbar";
@@ -25,16 +25,17 @@ function App() {
   return (
     <>
       <Navbar />
-      <h1 className=" text-4xl font-bold text-center mt-8 text-gray-800">
-        Welcome to The Dashboard
-      </h1>
+
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
           {/* Page content here */}
-
+          <Dashboard />
+          <div className="mb-8">
+            <EventCountCard />
+          </div>
           <div className="overflow-x-auto">
-            <table className="table table-xs">
+            <table className="table table-xs table-striped table-bordered w-full">
               <thead>
                 <tr>
                   <th>Timestamp</th>
@@ -69,8 +70,6 @@ function App() {
               </tbody>
             </table>
           </div>
-
-          <Dashboard />
         </div>
         <Drawer />
       </div>

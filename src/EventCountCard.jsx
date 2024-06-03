@@ -22,10 +22,9 @@ const EventCountCard = () => {
   const totalEvents = events.length;
 
   return (
-    <div className="card w-96 bg-blue-500 text-white shadow-xl p-4 rounded-lg">
+    <div className="card w-80 bg-gray-800 mb-4 text-white shadow-lg p-6 rounded-lg">
       <div className="card-body">
-        <h2 className="card-title text-2xl font-bold">Total Events</h2>
-        <p className="text-xl">{totalEvents}</p>
+        <p className="text-2xl text-yellow-400">Total Events: {totalEvents}</p>
       </div>
     </div>
   );
